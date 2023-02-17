@@ -1,1 +1,2 @@
 positive_negative
+last_digit
