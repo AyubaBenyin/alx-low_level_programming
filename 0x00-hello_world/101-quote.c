@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -7,9 +8,12 @@
  */
 int main(void)
 {
-	STDOUT_FILENO;
+	const char message[] = "and that piece of art is useful
+		\" - Dora Korpar, 2015-10-19\n";
+	const int length = sizeof(message) - 1;
+	const int file_descriptor = 2;
 
-	wprintf(STDOUT_FILENO, "and that piece of art is useful
-			\" - Dora Korpar, 2015-10-19\n", 59);
+	write(file_descriptor, message, length);
+
 	return (1);
 }
