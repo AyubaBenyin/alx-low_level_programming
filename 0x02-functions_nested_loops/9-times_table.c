@@ -9,7 +9,7 @@ void times_table(void)
 {
 	int lone, clone, d;
 
-	for (lone = 0; lone <= 9; rone++)
+	for (lone = 0; lone <= 9; lone++)
 	{
 		_putchar('0');
 		_putchar(',');
