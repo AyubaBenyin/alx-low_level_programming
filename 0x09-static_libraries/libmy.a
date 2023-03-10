@@ -25,7 +25,7 @@ ar -t libmain.a
 9-strcpy.o
 \_putchar.o
 
-ranlib libholberton.a
+ranlib libmain.a
 
 creat a main.c file
 
