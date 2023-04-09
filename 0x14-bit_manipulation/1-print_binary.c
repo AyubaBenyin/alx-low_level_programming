@@ -9,11 +9,11 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 0, max = 32768
+	unsigned long int mask = 0, max = 32768;
 	
 	if (n == 0)
 	{
-		_putchar('0);
+		_putchar('0');
 		return;
 	}
 	while (max)
