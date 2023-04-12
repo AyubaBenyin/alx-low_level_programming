@@ -13,24 +13,29 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
+	int append_text_to_file(const char *filename, char *text_content)
+{
+	int fdo, fdw, len = 0;
+
 	if (filename == NULL)
 		return (-1);
 
-	int fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
+	fdo = open(filename, O_RDWR | O_APPEND);
+	if (fdo < 0)
 		return (-1);
-
-	if (text_content != NULL)
+	if (text_content == NULL)
 	{
-		ssize_t len = write(fd, text_content, strlen(text_content));
-		if (len == -1)
-		{
-			close(fd);
-			return (-1);
-		}
+		close(fdo);
+		return (1);
 	}
 
-	close(fd);
+	while (*(text_content + len))
+		len++;
+
+	fdw = write(fdo, text_content, len);
+	close(fdo);
+	if (fdw < 0)
+		return (-1);
 
 	return (1);
 }
