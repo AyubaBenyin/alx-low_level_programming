@@ -12,7 +12,6 @@
  * @letters: The number of letters to read and print
  * Return: The number of letters read and printed, or 0 on failure
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fdo, fdr, fdw;
@@ -46,5 +45,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fdw < 0)
 		return (0);
 	return ((ssize_t)fdw);
-
 }
