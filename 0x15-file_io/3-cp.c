@@ -1,5 +1,9 @@
-#include "main.h"
+#include <unistd.h>
+#include <fcntl.h>
 #include <stdio.h>
+#include <stdlib.h>
+#define BUFSIZE 1024
+
 /**
   * main - entry point
   * @ac: argument count
@@ -38,4 +42,4 @@ int main(int ac, char *av[])
 	if (close(fd_to) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
 	return (0);
-}}
+}
