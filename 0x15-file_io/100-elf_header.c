@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <elf.h>
 
 /**
  * main - The entry point for program to get header of ELF file
